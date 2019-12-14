@@ -7,7 +7,7 @@ set_time_limit(0);
 //subscribe.php
 //require 'Predis/Autoloader.php';
 
-$$CFG = include_once(__DIR__ . "/../common/include/incConfig.php");
+$CFG = include_once(__DIR__ . "/../common/include/incConfig.php");
 
 //exit;
 if(!require_once(__DIR__ . "/../common/include/incUtil.php"))die("require incUtil fail.");
