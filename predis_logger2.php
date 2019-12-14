@@ -7,11 +7,13 @@ set_time_limit(0);
 //subscribe.php
 //require 'Predis/Autoloader.php';
 
-$CFG = include_once(__DIR__ . "/../c.g/incConfig.php");
+$$CFG = include_once(__DIR__ . "/../common/include/incConfig.php");
 
-require_once(__DIR__ . "/../common/include/incUtil.php");
-require_once(__DIR__ . "/../common/include/incSec.php");
-require_once(__DIR__ . "/../common/include/incDB.php");
+//exit;
+if(!require_once(__DIR__ . "/../common/include/incUtil.php"))die("require incUtil fail.");
+if(!require_once(__DIR__ . "/../common/include/incSec.php"))die("require incSec fail.");
+if(!require_once(__DIR__ . "/../common/include/incDB.php"))die("require incDB fail.");
+
 
 
 require_once($CFG["CFG_LIBS_PATH_REDIS"]);
