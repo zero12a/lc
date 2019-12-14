@@ -2,6 +2,6 @@
 
 echo Go Logger Watcher!
 
-cd /data/www/r.d/
+cd /data/www/l.c/
 
-/usr/local/php/bin/php ./predis_watcher.php > /dev/null 2>&1 &
+/usr/local/bin/php ./predis_watcher.php > /dev/null 2>&1 &
