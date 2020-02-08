@@ -51,7 +51,7 @@ while (1==1) {
 	//수시 큐의 로그를 DB에 저장
 	while($value = $clientAuthQ->lpop( $list_nm )){
 		
-		echo "\t" . $value . "\n";
+		alog("redis " . $list_nm . " lpop value : " . $value);
 		logToMonolog($value);
 	}
 	
