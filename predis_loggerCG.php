@@ -69,8 +69,10 @@ if($db)unset($db);
 
 
 function logToMonolog($jsonStr){
-    global $list_nm;
-    $db = db_obj_open(getDbSvrInfo("CG"));
+    global $list_nm, $CFG;
+    $db = getDbConn($CFG["CFG_DB"]["CG"]);
+
+    //$db = db_obj_open(getDbSvrInfo("CG"));
 
     $tMap = json_decode($jsonStr,true);
     //$tMap = $tMap["MAP"];

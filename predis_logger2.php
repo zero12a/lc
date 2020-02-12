@@ -75,8 +75,10 @@ if($db)unset($db);
 
 
 function logUsrAuth($jsonStr){
-    
-    $db = db_obj_open(getDbSvrInfo("SC"));
+    global $CFG;
+    $db = getDbConn($CFG["CFG_DB"]["CG"]);
+
+    //$db = db_obj_open(getDbSvrInfo("SC"));
 
     $tMap = json_decode($jsonStr,true);
     $tMap = $tMap["MAP"];
@@ -113,8 +115,10 @@ function logUsrAuth($jsonStr){
 
 
 function logUsrAuthD($jsonStr){
-    
-    $db = db_obj_open(getDbSvrInfo("DATING"));
+    global $CFG;
+    $db = getDbConn($CFG["CFG_DB"]["DATING"]);
+
+    //$db = db_obj_open(getDbSvrInfo("DATING"));
 
     $tMap = json_decode($jsonStr,true);
     $tMap = $tMap["MAP"];
