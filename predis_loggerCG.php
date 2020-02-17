@@ -70,7 +70,7 @@ if($db)unset($db);
 
 function logToMonolog($jsonStr){
     global $list_nm, $CFG;
-    $db = getDbConn($CFG["CFG_DB"]["CG"]);
+    $db = getDbConn($CFG["CFG_DB"]["CGPJT1"]);
 
     //$db = db_obj_open(getDbSvrInfo("CG"));
 
